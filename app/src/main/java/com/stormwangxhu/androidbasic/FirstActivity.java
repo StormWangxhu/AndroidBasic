@@ -16,12 +16,12 @@ public class FirstActivity extends BaseActivity {
 
     private Button button;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        initViews();//初始化操作
+        //初始化操作
+        initViews();
     }
 
     private void initViews() {
@@ -33,24 +33,13 @@ public class FirstActivity extends BaseActivity {
                 Date date = new Date();
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 String nowFirstActivityTime = format.format(date);
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);//启动SecondActivity
-                intent.putExtra("extra_data", nowFirstActivityTime);//把当前Activity的时间传给下个活动
-                startActivityForResult(intent, 1);
+                //启动SecondActivity
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                //把当前Activity的时间传给下个活动
+                intent.putExtra("time_data", nowFirstActivityTime);
+                startActivity(intent);
             }
         });
     }
 
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        switch (requestCode) {
-            case 1:
-                if (requestCode == RESULT_OK) {
-                    String datas = data.getStringExtra("extra_data");
-                    Log.d("FirstActivity", datas);
-                }
-                break;
-            default:
-        }
-    }
 }
