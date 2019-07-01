@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * TODO: 演示四种模式
+ */
 public class ActivityLaunchModesTest extends AppCompatActivity {
 
     @Override

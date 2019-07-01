@@ -7,9 +7,20 @@
     <Button
         android:id="@+id/start_second_button"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#CCCCFF"
+        android:layout_height="wrap_content"
         android:text="Start SecondActivity Button"
         android:textAllCaps="false"
         android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Describe what you see here "
+        android:maxLines="2" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_1" />
 </LinearLayout>
