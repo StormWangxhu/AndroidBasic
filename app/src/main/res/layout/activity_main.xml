@@ -20,4 +20,11 @@
         android:text="Start FirstActivity"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/ui_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start UILayoutTestActivity"
+        android:textAllCaps="false" />
+
 </LinearLayout>

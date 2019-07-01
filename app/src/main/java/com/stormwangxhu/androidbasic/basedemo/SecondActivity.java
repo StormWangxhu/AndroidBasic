@@ -9,10 +9,12 @@ import android.widget.Toast;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
+import com.stormwangxhu.androidbasic.launchmodes.ActivityLaunchModesTest;
 
 public class SecondActivity extends BaseActivity {
 
     private Button startButton;
+
     private Button showTimeButton;
 
     @Override

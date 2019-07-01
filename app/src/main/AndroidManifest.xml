@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".basedemo.ActivityLaunchModesTest"
+            android:name=".launchmodes.ActivityLaunchModesTest"
             android:label="This is LaunchModeTest"
             android:launchMode="singleTop" />
         <activity
@@ -28,7 +28,16 @@
         <activity
             android:name=".basedemo.SecondActivity"
             android:label="This is SecondActivity" />
-        <activity android:name=".UIlayout.LinearLayoutTest"></activity>
+        <activity
+            android:name=".UIlayout.LinearLayoutTest"
+            android:label="This is LinearLayoutTest" />
+        <activity
+            android:name=".UIlayout.RelativeLayoutTest"
+            android:label="This is RelativeLayoutTest" />
+        <activity
+            android:name=".UIlayout.FrameLayoutTest"
+            android:label="This is FrameLayoutTest" />
+        <activity android:name=".UIlayout.PercentFrameLayoutTest"></activity>
     </application>
 
 </manifest>

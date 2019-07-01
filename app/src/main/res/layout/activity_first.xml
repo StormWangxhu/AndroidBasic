@@ -19,6 +19,11 @@
         android:hint="Describe what you see here "
         android:maxLines="2" />
 
+    <ProgressBar
+        android:id="@+id/progess_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

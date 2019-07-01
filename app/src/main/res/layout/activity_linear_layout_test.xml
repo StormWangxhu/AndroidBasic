@@ -5,31 +5,35 @@
     android:orientation="horizontal">
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/relative_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button1"
+        android:layout_gravity="center"
+        android:text="RelativeButton"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:text="Button2"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/frame_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button3"
+        android:layout_gravity="center_vertical"
+        android:text="FrameButton"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/percent_frame_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button4"
+        android:layout_gravity="top"
+        android:text="PercentFrameButton"
         android:textAllCaps="false" />
 
 </LinearLayout>
