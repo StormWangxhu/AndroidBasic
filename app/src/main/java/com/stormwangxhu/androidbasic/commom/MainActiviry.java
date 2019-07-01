@@ -1,4 +1,4 @@
-package com.stormwangxhu.androidbasic;
+package com.stormwangxhu.androidbasic.commom;
 
 
 import android.content.Intent;
@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.stormwangxhu.androidbasic.R;
+import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 
 /**
  * 所有的活动都必须在AndroidManifest.xml文件中注册才能生效。

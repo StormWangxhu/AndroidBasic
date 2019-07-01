@@ -10,26 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ActivityLaunchModesTest"
+            android:name=".basedemo.ActivityLaunchModesTest"
             android:label="This is LaunchModeTest"
-            android:launchMode="singleTop"></activity>
-
+            android:launchMode="singleTop" />
         <activity
-            android:name=".MainActiviry"
+            android:name=".commom.MainActiviry"
             android:label="This is MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".FirstActivity"
-            android:label="This is FirstActivity"></activity>
-
+            android:name=".basedemo.FirstActivity"
+            android:label="This is FirstActivity" />
         <activity
-            android:name=".SecondActivity"
-            android:label="This is SecondActivity"></activity>
+            android:name=".basedemo.SecondActivity"
+            android:label="This is SecondActivity" />
+        <activity android:name=".UIlayout.LinearLayoutTest"></activity>
     </application>
 
 </manifest>

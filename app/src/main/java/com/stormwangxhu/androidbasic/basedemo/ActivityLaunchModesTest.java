@@ -1,11 +1,10 @@
-package com.stormwangxhu.androidbasic;
+package com.stormwangxhu.androidbasic.basedemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+
+import com.stormwangxhu.androidbasic.R;
 
 /**
  * TODO: 演示四种模式
