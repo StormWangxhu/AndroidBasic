@@ -11,8 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".launchmodes.ActivityLaunchModesTest"
-            android:label="This is LaunchModeTest"
-            android:launchMode="singleTop" />
+            android:label="This is LaunchModeTest" />
         <activity
             android:name=".commom.MainActiviry"
             android:label="This is MainActivity">
@@ -37,7 +36,23 @@
         <activity
             android:name=".UIlayout.FrameLayoutTest"
             android:label="This is FrameLayoutTest" />
-        <activity android:name=".UIlayout.PercentFrameLayoutTest"></activity>
+        <activity android:name=".UIlayout.PercentFrameLayoutTest" />
+        <activity
+            android:name=".launchmodes.StandardMode"
+            android:label="This is Standard Mode Test"
+            android:launchMode="standard" />
+        <activity
+            android:name=".launchmodes.SingleTopMode"
+            android:label="This is SingleTop Task"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".launchmodes.SingleTaskMode"
+            android:label="This is SingleTaskMode Test"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".launchmodes.SingleInstanceMode"
+            android:label="This is SingleInstanceMode Test"
+            android:launchMode="singleInstance"></activity>
     </application>
 
 </manifest>

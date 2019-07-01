@@ -13,18 +13,19 @@ import com.stormwangxhu.androidbasic.launchmodes.ActivityLaunchModesTest;
 
 public class SecondActivity extends BaseActivity {
 
-    private Button startButton;
+    private Button startLaunchButton;
 
     private Button showTimeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("SecondActivity:",this.toString());
         setContentView(R.layout.activity_second);
-        startButton = findViewById(R.id.start_launch_button);
+        startLaunchButton = findViewById(R.id.start_launch_button);
         showTimeButton = findViewById(R.id.show_time_button);
 
-        startButton.setOnClickListener(new View.OnClickListener() {
+        startLaunchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentDrive = new Intent(SecondActivity.this, ActivityLaunchModesTest.class);

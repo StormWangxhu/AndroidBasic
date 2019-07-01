@@ -18,4 +18,9 @@
         android:text="Show FirstActivity Time"
         android:textAllCaps="false" />
 
+    <ProgressBar
+        android:id="@+id/progess_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

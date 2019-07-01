@@ -7,6 +7,38 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="ActivityLaunchModesTest" />
+
+
+    <Button
+        android:id="@+id/standard_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Standard"/>
+
+    <Button
+        android:id="@+id/single_top_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SingleTop"/>
+
+    <Button
+        android:id="@+id/single_task_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SingleTask"/>
+
+
+    <Button
+        android:id="@+id/single_instance_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="SingleInstance"/>
+
 
 </LinearLayout>
