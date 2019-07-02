@@ -53,7 +53,7 @@ public class MainActiviry extends BaseActivity {
         listViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActiviry.this, ListViewDemoArrayAdapterActivity.class);
+                Intent intent = new Intent(MainActiviry.this,   ListViewDemoArrayAdapterActivity.class);
                 startActivity(intent);
             }
         });

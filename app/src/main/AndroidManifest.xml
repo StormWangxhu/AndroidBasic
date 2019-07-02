@@ -53,8 +53,9 @@
             android:name=".launchmodes.SingleInstanceMode"
             android:label="This is SingleInstanceMode Test"
             android:launchMode="singleInstance" />
-        <activity android:name=".listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity"
-            android:label="This is ListViewDemo"/>
+        <activity
+            android:name=".listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity"
+            android:label="This is ListViewDemo" />
     </application>
 
 </manifest>

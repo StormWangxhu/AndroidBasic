@@ -15,10 +15,7 @@ import java.util.List;
 
 public class ListViewDemoArrayAdapterActivity extends BaseActivity {
 
-    private String[] data = {"Apple", "Banana", "Orange", "Whatmelo", "Pear", "Grape", "Pineapple", "Chery", "Mango"};
-
     private List<Fruit> fruitList = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +35,7 @@ public class ListViewDemoArrayAdapterActivity extends BaseActivity {
     }
 
     private void initFruits() {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 10000; i++) {
             Fruit apple = new Fruit("Apple", R.drawable.fruit_1);
             fruitList.add(apple);
             Fruit banana = new Fruit("Banana", R.drawable.fruit_2);
