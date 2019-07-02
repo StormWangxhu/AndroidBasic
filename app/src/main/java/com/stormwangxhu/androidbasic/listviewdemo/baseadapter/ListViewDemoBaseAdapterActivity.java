@@ -1,6 +1,7 @@
-package com.stormwangxhu.androidbasic.listviewdemo.arrayadapter;
+package com.stormwangxhu.androidbasic.listviewdemo.baseadapter;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -9,34 +10,40 @@ import android.widget.Toast;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
-import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.Fruit;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewDemoArrayAdapterActivity extends BaseActivity {
+public class ListViewDemoBaseAdapterActivity extends BaseActivity {
 
     private List<Fruit> fruitList = new ArrayList<>();
+
+    private Context context;
+
+    private MyBaseAdapter myBaseAdapter;
+
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view_demo);
+        setContentView(R.layout.activity_list_view_demo_base_adapter);
+        context = ListViewDemoBaseAdapterActivity.this;
         initFruits();
-        FruitAdapter fruitAdapter = new FruitAdapter(ListViewDemoArrayAdapterActivity.this, R.layout.listview_fruit_item, fruitList);
+        MyBaseAdapter fruitAdapter = new MyBaseAdapter(fruitList, context);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(fruitAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Fruit fruit = fruitList.get(position);
-                Toast.makeText(ListViewDemoArrayAdapterActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListViewDemoBaseAdapterActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void initFruits() {
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000; i++) {
             Fruit apple = new Fruit("Apple", R.drawable.fruit_1);
             fruitList.add(apple);
             Fruit banana = new Fruit("Banana", R.drawable.fruit_2);
@@ -53,6 +60,4 @@ public class ListViewDemoArrayAdapterActivity extends BaseActivity {
             fruitList.add(mango);
         }
     }
-
-
 }

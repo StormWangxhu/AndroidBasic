@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
+import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity;
 import com.stormwangxhu.androidbasic.uilayout.LinearLayoutTest;
 
 
@@ -24,6 +25,8 @@ public class MainActiviry extends BaseActivity {
 
     //启动listView按钮
     private Button listViewButton;
+
+    private Button listviewAdapterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +56,16 @@ public class MainActiviry extends BaseActivity {
         listViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActiviry.this,   ListViewDemoArrayAdapterActivity.class);
+                Intent intent = new Intent(MainActiviry.this, ListViewDemoArrayAdapterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        listviewAdapterButton = findViewById(R.id.listview_adapter_button);
+        listviewAdapterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, ListViewDemoBaseAdapterActivity.class);
                 startActivity(intent);
             }
         });

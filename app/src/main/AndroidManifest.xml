@@ -56,6 +56,7 @@
         <activity
             android:name=".listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity"
             android:label="This is ListViewDemo" />
+        <activity android:name=".listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity"></activity>
     </application>
 
 </manifest>

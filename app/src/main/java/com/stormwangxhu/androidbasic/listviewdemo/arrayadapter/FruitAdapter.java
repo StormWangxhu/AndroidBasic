@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.stormwangxhu.androidbasic.R;
+import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.Fruit;
 
 import java.util.List;
 
