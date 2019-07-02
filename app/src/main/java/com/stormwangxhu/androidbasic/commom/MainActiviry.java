@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
-import com.stormwangxhu.androidbasic.listviewdemo.ListViewDemoActivity;
+import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoActivity;
 import com.stormwangxhu.androidbasic.uilayout.LinearLayoutTest;
 
 

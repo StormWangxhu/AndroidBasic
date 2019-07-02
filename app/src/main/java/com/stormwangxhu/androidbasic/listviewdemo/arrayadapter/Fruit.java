@@ -1,4 +1,4 @@
-package com.stormwangxhu.androidbasic.listviewdemo;
+package com.stormwangxhu.androidbasic.listviewdemo.arrayadapter;
 
 public class Fruit {
 

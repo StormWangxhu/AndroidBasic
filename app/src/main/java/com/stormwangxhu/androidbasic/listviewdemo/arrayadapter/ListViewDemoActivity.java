@@ -1,4 +1,4 @@
-package com.stormwangxhu.androidbasic.listviewdemo;
+package com.stormwangxhu.androidbasic.listviewdemo.arrayadapter;
 
 
 import android.os.Bundle;
