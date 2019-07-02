@@ -1,5 +1,5 @@
 
-package com.stormwangxhu.androidbasic.UIlayout;
+package com.stormwangxhu.androidbasic.uilayout;
 
 import android.content.Intent;
 import android.os.Bundle;

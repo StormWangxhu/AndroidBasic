@@ -11,7 +11,7 @@ import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
 
 /**
- * TODO: 演示四种模式
+ * TODO: 阅读官方文档
  */
 public class ActivityLaunchModesTest extends BaseActivity {
 

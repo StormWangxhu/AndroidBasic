@@ -28,15 +28,15 @@
             android:name=".basedemo.SecondActivity"
             android:label="This is SecondActivity" />
         <activity
-            android:name=".UIlayout.LinearLayoutTest"
+            android:name=".uilayout.LinearLayoutTest"
             android:label="This is LinearLayoutTest" />
         <activity
-            android:name=".UIlayout.RelativeLayoutTest"
+            android:name=".uilayout.RelativeLayoutTest"
             android:label="This is RelativeLayoutTest" />
         <activity
-            android:name=".UIlayout.FrameLayoutTest"
+            android:name=".uilayout.FrameLayoutTest"
             android:label="This is FrameLayoutTest" />
-        <activity android:name=".UIlayout.PercentFrameLayoutTest" />
+        <activity android:name=".uilayout.PercentFrameLayoutTest" />
         <activity
             android:name=".launchmodes.StandardMode"
             android:label="This is Standard Mode Test"
@@ -53,6 +53,8 @@
             android:name=".launchmodes.SingleInstanceMode"
             android:label="This is SingleInstanceMode Test"
             android:launchMode="singleInstance" />
+        <activity android:name=".listviewdemo.ListViewDemoActivity"
+            android:label="This is ListViewDemo"/>
     </application>
 
 </manifest>
