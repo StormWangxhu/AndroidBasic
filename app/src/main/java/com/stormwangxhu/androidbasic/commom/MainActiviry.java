@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
-import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoActivity;
+import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
 import com.stormwangxhu.androidbasic.uilayout.LinearLayoutTest;
 
 
@@ -53,7 +53,7 @@ public class MainActiviry extends BaseActivity {
         listViewButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActiviry.this, ListViewDemoActivity.class);
+                Intent intent = new Intent(MainActiviry.this, ListViewDemoArrayAdapterActivity.class);
                 startActivity(intent);
             }
         });

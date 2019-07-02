@@ -13,7 +13,7 @@ import com.stormwangxhu.androidbasic.commom.BaseActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewDemoActivity extends BaseActivity {
+public class ListViewDemoArrayAdapterActivity extends BaseActivity {
 
     private String[] data = {"Apple", "Banana", "Orange", "Whatmelo", "Pear", "Grape", "Pineapple", "Chery", "Mango"};
 
@@ -25,14 +25,14 @@ public class ListViewDemoActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_demo);
         initFruits();
-        FruitAdapter fruitAdapter = new FruitAdapter(ListViewDemoActivity.this, R.layout.listview_fruit_item, fruitList);
+        FruitAdapter fruitAdapter = new FruitAdapter(ListViewDemoArrayAdapterActivity.this, R.layout.listview_fruit_item, fruitList);
         ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(fruitAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Fruit fruit = fruitList.get(position);
-                Toast.makeText(ListViewDemoActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListViewDemoArrayAdapterActivity.this, fruit.getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }
