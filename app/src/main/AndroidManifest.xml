@@ -52,7 +52,7 @@
         <activity
             android:name=".launchmodes.SingleInstanceMode"
             android:label="This is SingleInstanceMode Test"
-            android:launchMode="singleInstance"></activity>
+            android:launchMode="singleInstance" />
     </application>
 
 </manifest>

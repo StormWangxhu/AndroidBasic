@@ -50,7 +50,7 @@ public class ActivityLaunchModesTest extends BaseActivity {
         });
 
         //SingleTask模式演示
-        singleTaskButton.findViewById(R.id.single_task_button);
+        singleTaskButton = findViewById(R.id.single_task_button);
         singleTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
