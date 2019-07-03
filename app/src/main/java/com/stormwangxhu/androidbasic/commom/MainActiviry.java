@@ -11,6 +11,7 @@ import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity;
+import com.stormwangxhu.androidbasic.service.servicedemo.ServiceDemoActivity;
 import com.stormwangxhu.androidbasic.uilayout.LinearLayoutTest;
 
 
@@ -28,10 +29,13 @@ public class MainActiviry extends BaseActivity {
 
     private Button listviewAdapterButton;
 
+    //启动Serice
+    private Button serviceStartButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e(TAG, "onCreate");
+        Log.d(TAG, "onCreate");
         setContentView(R.layout.activity_main);//在调用布局文件
         startFirstActivityButton = findViewById(R.id.start_first_activity);
         uiButton = findViewById(R.id.ui_button);
@@ -66,6 +70,15 @@ public class MainActiviry extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, ListViewDemoBaseAdapterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        serviceStartButton = findViewById(R.id.service_button);
+        serviceStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, ServiceDemoActivity.class);
                 startActivity(intent);
             }
         });

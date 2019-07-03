@@ -57,6 +57,18 @@
             android:name=".listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity"
             android:label="This is ListViewDemo" />
         <activity android:name=".listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity" />
+
+        <service
+            android:name=".service.servicedemo.MyServiceByStart"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".service.servicedemo.ServiceDemoActivity" />
+
+        <service
+            android:name=".service.servicedemo.MyServiceByBind"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

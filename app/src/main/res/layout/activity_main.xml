@@ -41,4 +41,11 @@
         android:text="Start ListView BaseAdapter"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ServiceDemoButton"
+        android:textAllCaps="false" />
+
 </LinearLayout>
