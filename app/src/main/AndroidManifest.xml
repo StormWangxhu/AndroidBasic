@@ -57,8 +57,6 @@
             android:name=".listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity"
             android:label="This is ListViewDemo" />
         <activity android:name=".listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity" />
-        <activity android:name=".basedemo.ThreadDemoActivity"
-            android:label="This is Thread Test"/>
     </application>
 
 </manifest>
