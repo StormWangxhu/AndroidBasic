@@ -18,17 +18,11 @@ public class ListViewDemoBaseAdapterActivity extends BaseActivity {
 
     private List<Fruit> fruitList = new ArrayList<>();
 
-    private Context context;
-
-    private MyBaseAdapter myBaseAdapter;
-
-    private ListView listView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view_demo_base_adapter);
-        context = ListViewDemoBaseAdapterActivity.this;
+        Context context = ListViewDemoBaseAdapterActivity.this;
         initFruits();
         MyBaseAdapter fruitAdapter = new MyBaseAdapter(fruitList, context);
         ListView listView = findViewById(R.id.list_view);

@@ -10,12 +10,11 @@ import android.widget.TextView;
 
 import com.stormwangxhu.androidbasic.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MyBaseAdapter extends BaseAdapter {
 
-    private List<Fruit> fruitList = new ArrayList<>();
+    private List<Fruit> fruitList ;
 
     private Context context;
 
