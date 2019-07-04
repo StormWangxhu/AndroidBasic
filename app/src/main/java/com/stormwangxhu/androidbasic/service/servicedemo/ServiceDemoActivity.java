@@ -7,32 +7,27 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
 
+import java.util.Random;
+
 public class ServiceDemoActivity extends BaseActivity implements View.OnClickListener {
 
-    private Button startServiceButton;
+    /**
+     * 得到引用
+     */
+    private MyServiceByBind.MyBinder myBinder;
 
-    private Button stopServiceButton;
-
-    private Button bindServiceButton;
-
-    private Button unbindServiceButton;
-
-    private EditText editText;
-
-    private ServiceConnection serviceConnection = new ServiceConnection() {
+    private ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-
+            myBinder = (MyServiceByBind.MyBinder) iBinder;
         }
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-
         }
     };
 
@@ -41,20 +36,21 @@ public class ServiceDemoActivity extends BaseActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_demo);
 
-        startServiceButton = findViewById(R.id.start_service1_button);
+        Button startServiceButton = findViewById(R.id.start_service1_button);
+        Button stopServiceButton = findViewById(R.id.stop_service2_button);
+        Button sumButton = findViewById(R.id.sum_button);
+        Button reduceButton = findViewById(R.id.reduce_button);
+        Button showUserInfo = findViewById(R.id.show_info);
         startServiceButton.setOnClickListener(this);
-
-        stopServiceButton = findViewById(R.id.stop_service2_button);
         stopServiceButton.setOnClickListener(this);
-
-        bindServiceButton = findViewById(R.id.bind_service_button);
-        bindServiceButton.setOnClickListener(this);
-
-        unbindServiceButton = findViewById(R.id.unbind_service_button);
-        unbindServiceButton.setOnClickListener(this);
-
-        editText = findViewById(R.id.editText_service);
-
+        showUserInfo.setOnClickListener(this);
+        sumButton.setOnClickListener(this);
+        reduceButton.setOnClickListener(this);
+        Intent intent = new Intent(this, MyServiceByBind.class);
+        // 启动服务
+        startService(intent);
+        // 绑定服务
+        bindService(intent, connection, BIND_AUTO_CREATE);
     }
 
     @Override
@@ -62,7 +58,6 @@ public class ServiceDemoActivity extends BaseActivity implements View.OnClickLis
         switch (view.getId()) {
             case R.id.start_service1_button:
                 Intent startIntent = new Intent(ServiceDemoActivity.this, MyServiceByStart.class);
-                startIntent.putExtra("data", editText.getText().toString());
                 startService(startIntent);
                 break;
             case R.id.stop_service2_button:
@@ -70,16 +65,25 @@ public class ServiceDemoActivity extends BaseActivity implements View.OnClickLis
                 stopService(stopIntent);
                 break;
 
-            case R.id.bind_service_button:
-                Intent bindIntent = new Intent(ServiceDemoActivity.this, MyServiceByBind.class);
-                //绑定服务
-                bindService(bindIntent, serviceConnection, BIND_AUTO_CREATE);
+            case R.id.sum_button:
+                Random numRandom = new Random();
+                int a = numRandom.nextInt(10);
+                int b = numRandom.nextInt(10);
+                myBinder.sum(a, b);
                 break;
-            case R.id.unbind_service_button:
-                //解绑服务
-                unbindService(serviceConnection);
+            case R.id.reduce_button:
+                Random reduceRandom = new Random();
+                int a1 = reduceRandom.nextInt(10);
+                int b1 = reduceRandom.nextInt(10);
+                myBinder.reduce(a1, b1);
                 break;
-
+            case R.id.show_info:
+                User user = new User();
+                user.setAge(21);
+                user.setId(20190704);
+                user.setName("stormwanghu");
+                myBinder.showUserInfo(user);
+                break;
             default:
                 break;
         }

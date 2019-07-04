@@ -2,54 +2,46 @@ package com.stormwangxhu.androidbasic.service.servicedemo;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
+/**
+ * 提供一个计算数值的服务
+ */
 public class MyServiceByBind extends Service {
 
-    private String data="";
+    private int result = 0;
 
-    private boolean isRun;
+    private MyBinder binder = new MyBinder();
 
-    public MyServiceByBind() {
+    class MyBinder extends Binder {
+        public int sum(int a, int b) {
+            result = a + b;
+            Log.e("MyServiceByBind:", "sum=" + result);
+            Toast.makeText(MyServiceByBind.this, "a=" + a + ",b=" + b + " sumResult=" + result, Toast.LENGTH_SHORT).show();
+            return result;
+        }
+
+        public int reduce(int a, int b) {
+            result = a - b;
+            Log.e("MyServiceByBind:", "reduce=" + result);
+            Toast.makeText(MyServiceByBind.this, "a=" + a + ",b=" + b + " reduceResult=" + result, Toast.LENGTH_SHORT).show();
+            return result;
+        }
+
+        public void showUserInfo(User user) {
+            Integer uid = user.getId();
+            Integer age = user.getAge();
+            String username = user.getName();
+            Log.e("MyServiceByBind:", "user=" + user);
+            Toast.makeText(MyServiceByBind.this, "User{ uid = " + uid + ",age = " + age + ",username=" + username, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.e("MyServiceByBind", "onBind executed,ThreadId :" + Thread.currentThread().getId());
-        // TODO: Return the communication channel to the service.
-        return null;
-//        throw new UnsupportedOperationException("Not yet implemented");
-    }
-
-    @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        data = intent.getStringExtra("data");
-        return super.onStartCommand(intent, flags, startId);
-    }
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        isRun = true;
-        new Thread() {
-            @Override
-            public void run() {
-                while (isRun) {
-                    Log.d("MyServiceByBind", "Service中获取到的数据:"+data);
-                    try {
-                        Thread.sleep(1000);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }.start();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        isRun = false;
+        return binder;
     }
 }

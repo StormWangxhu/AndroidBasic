@@ -45,7 +45,7 @@
         android:id="@+id/service_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ServiceDemoButton"
+        android:text="ServiceButton"
         android:textAllCaps="false" />
 
 </LinearLayout>

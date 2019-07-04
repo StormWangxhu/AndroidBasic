@@ -2,18 +2,26 @@ package com.stormwangxhu.androidbasic.service.servicedemo;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
 public class MyServiceByStart extends Service {
+
+
     public MyServiceByStart() {
     }
 
     @Override
     public IBinder onBind(Intent intent) {
         Log.e("MyServiceByStart", "onBind executed,ThreadId :" + Thread.currentThread().getId());
-        // TODO: Return the communication channel to the service.
-        throw new UnsupportedOperationException("Not yet implemented");
+        return new MyBinder();
+    }
+
+    class MyBinder extends Binder {
+        public MyServiceByStart getMyServiceByStart() {
+            return MyServiceByStart.this;
+        }
     }
 
     @Override
@@ -24,9 +32,10 @@ public class MyServiceByStart extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.e("MyServiceByStart", "onStartCommand executed,ThreadId :" + Thread.currentThread().getId());
+        Log.e(this.getClass().getName(), "onStartCommand executed,ThreadId :" + Thread.currentThread().getId());
         return super.onStartCommand(intent, flags, startId);
     }
+
 
     @Override
     public void onDestroy() {

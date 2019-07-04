@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <Button
         android:id="@+id/start_service1_button"
         android:layout_width="wrap_content"
@@ -20,27 +19,24 @@
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/bind_service_button"
+        android:id="@+id/sum_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bind Service"
+        android:text="BindSum"
         android:textAllCaps="false" />
-
-    <EditText
-        android:id="@+id/editText_service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10">
-
-        <requestFocus />
-    </EditText>
 
     <Button
-        android:id="@+id/unbind_service_button"
+        android:id="@+id/reduce_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Unbind Service"
+        android:text="bindReduce"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/show_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show info"
+        android:textAllCaps="false" />
 
 </LinearLayout>
