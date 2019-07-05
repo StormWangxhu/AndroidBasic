@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
+import com.stormwangxhu.androidbasic.datastorage.SharedPreferencesActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity;
 import com.stormwangxhu.androidbasic.permission.PermissionActivity;
@@ -22,18 +23,22 @@ public class MainActiviry extends BaseActivity {
 
     private Button startFirstActivityButton;
 
-    //启动线性布局按钮
+    // 启动线性布局按钮
     private Button uiButton;
 
-    //启动listView按钮
+    // 启动listView按钮
     private Button listViewButton;
 
     private Button listviewAdapterButton;
 
-    //启动Serice
+    // 启动Serice
     private Button serviceStartButton;
 
+    // 运行时权限申请演示按钮
     private Button permissionButton;
+
+    // SharedPreferenced 存储演示按钮
+    private Button sharedPreferenceButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +96,15 @@ public class MainActiviry extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, PermissionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sharedPreferenceButton = findViewById(R.id.shared_preference_button);
+        sharedPreferenceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, SharedPreferencesActivity.class);
                 startActivity(intent);
             }
         });

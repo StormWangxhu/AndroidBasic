@@ -72,8 +72,18 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".service.threaddemo.ThreadActivity" />
-        <activity android:name=".permission.PermissionActivity" />
+        <activity
+            android:name=".service.threaddemo.ThreadActivity"
+            android:label="ThreadDemo" />
+        <activity
+            android:name=".permission.PermissionActivity"
+            android:label="PermissionDemo" />
+        <activity
+            android:name=".datastorage.SharedPreferencesActivity"
+            android:label="SharedPreferencr Demo" />
+        <activity
+            android:name=".datastorage.IOActivity"
+            android:label="IODemo" />
     </application>
 
 </manifest>
