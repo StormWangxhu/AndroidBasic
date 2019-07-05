@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stormwangxhu.androidbasic">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -70,7 +72,8 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".service.threaddemo.ThreadActivity"></activity>
+        <activity android:name=".service.threaddemo.ThreadActivity" />
+        <activity android:name=".permission.PermissionActivity" />
     </application>
 
 </manifest>

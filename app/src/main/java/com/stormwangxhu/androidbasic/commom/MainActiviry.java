@@ -11,6 +11,7 @@ import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity;
+import com.stormwangxhu.androidbasic.permission.PermissionActivity;
 import com.stormwangxhu.androidbasic.service.servicedemo.ServiceDemoActivity;
 import com.stormwangxhu.androidbasic.uilayout.LinearLayoutTest;
 
@@ -31,6 +32,8 @@ public class MainActiviry extends BaseActivity {
 
     //启动Serice
     private Button serviceStartButton;
+
+    private Button permissionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +82,15 @@ public class MainActiviry extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, ServiceDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        permissionButton = findViewById(R.id.permision_button);
+        permissionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, PermissionActivity.class);
                 startActivity(intent);
             }
         });
