@@ -68,7 +68,9 @@
         <service
             android:name=".service.servicedemo.MyServiceByBind"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".service.threaddemo.ThreadActivity"></activity>
     </application>
 
 </manifest>

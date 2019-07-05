@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
+import com.stormwangxhu.androidbasic.service.threaddemo.ThreadActivity;
 
 import java.util.Random;
 
@@ -58,7 +59,9 @@ public class ServiceDemoActivity extends BaseActivity implements View.OnClickLis
         switch (view.getId()) {
             case R.id.start_service1_button:
                 Intent startIntent = new Intent(ServiceDemoActivity.this, MyServiceByStart.class);
+                Intent startThread = new Intent(ServiceDemoActivity.this, ThreadActivity.class);
                 startService(startIntent);
+                startActivity(startThread);
                 break;
             case R.id.stop_service2_button:
                 Intent stopIntent = new Intent(ServiceDemoActivity.this, MyServiceByStart.class);
