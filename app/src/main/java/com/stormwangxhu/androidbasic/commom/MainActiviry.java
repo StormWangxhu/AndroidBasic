@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
+import com.stormwangxhu.androidbasic.database.DataBaseActivity;
 import com.stormwangxhu.androidbasic.datastorage.SharedPreferencesActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.baseadapter.ListViewDemoBaseAdapterActivity;
@@ -39,6 +40,9 @@ public class MainActiviry extends BaseActivity {
 
     // SharedPreferenced 存储演示按钮
     private Button sharedPreferenceButton;
+
+    // 数据库相关操作Button
+    private Button databaseButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +109,15 @@ public class MainActiviry extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, SharedPreferencesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        databaseButton = findViewById(R.id.database_button);
+        databaseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, DataBaseActivity.class);
                 startActivity(intent);
             }
         });

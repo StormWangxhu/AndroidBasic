@@ -18,7 +18,7 @@ import androidx.core.content.ContextCompat;
 
 public class PermissionActivity extends BaseActivity {
 
-    private static final int makeCallPhoneCode = 1;
+    private static final int MAKE_CALL_PHONE_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class PermissionActivity extends BaseActivity {
                 // 第一步先判断用户是否已经授权
                 if (ContextCompat.checkSelfPermission(PermissionActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     // 请求授权,此时系统会弹出一个对话框，用户选择同意或者拒绝
-                    ActivityCompat.requestPermissions(PermissionActivity.this, new String[]{Manifest.permission.CALL_PHONE}, makeCallPhoneCode);
+                    ActivityCompat.requestPermissions(PermissionActivity.this, new String[]{Manifest.permission.CALL_PHONE}, MAKE_CALL_PHONE_CODE);
                 } else {
                     call();
                 }
@@ -53,7 +53,7 @@ public class PermissionActivity extends BaseActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
-            case makeCallPhoneCode:
+            case MAKE_CALL_PHONE_CODE:
                 // 同意授权
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     call();

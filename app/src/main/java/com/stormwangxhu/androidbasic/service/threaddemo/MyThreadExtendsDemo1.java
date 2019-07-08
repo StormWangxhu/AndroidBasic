@@ -1,7 +1,7 @@
 package com.stormwangxhu.androidbasic.service.threaddemo;
 
 
-public class MyThreadExtendsDemo1 extends Thread{
+public class MyThreadExtendsDemo1 extends Thread {
 
     @Override
     public void run() {

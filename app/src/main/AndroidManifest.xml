@@ -84,6 +84,7 @@
         <activity
             android:name=".datastorage.IOActivity"
             android:label="IODemo" />
+        <activity android:name=".database.DataBaseActivity"></activity>
     </application>
 
 </manifest>
