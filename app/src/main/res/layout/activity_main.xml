@@ -76,4 +76,11 @@
         android:text="Contacts Button"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/broadcast_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Broadcast Button"
+        android:textAllCaps="false" />
+
 </LinearLayout>

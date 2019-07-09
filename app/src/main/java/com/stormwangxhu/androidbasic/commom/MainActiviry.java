@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
+import com.stormwangxhu.androidbasic.broacast.BroadcastActivity;
 import com.stormwangxhu.androidbasic.contacts.ContactsDemoActivity;
 import com.stormwangxhu.androidbasic.database.DataBaseActivity;
 import com.stormwangxhu.androidbasic.datastorage.SharedPreferencesActivity;
@@ -46,6 +47,8 @@ public class MainActiviry extends BaseActivity {
     private Button databaseButton;
 
     private Button contactsButton;
+
+    private Button broadcastButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,6 +133,15 @@ public class MainActiviry extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, ContactsDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        broadcastButton = findViewById(R.id.broadcast_button);
+        broadcastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, BroadcastActivity.class);
                 startActivity(intent);
             }
         });
