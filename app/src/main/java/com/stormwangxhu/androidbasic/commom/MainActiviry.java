@@ -50,6 +50,8 @@ public class MainActiviry extends BaseActivity {
 
     private Button broadcastButton;
 
+    private Button forceOfflineButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,6 +145,15 @@ public class MainActiviry extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, BroadcastActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        forceOfflineButton = findViewById(R.id.force_offline);
+        forceOfflineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.stormwangxhu.androidbasic.broadcast.demo.FORCE_OFFLINE");
+                sendBroadcast(intent);
             }
         });
     }

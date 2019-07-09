@@ -20,13 +20,7 @@
             android:label="This is LaunchModeTest" />
         <activity
             android:name=".commom.MainActiviry"
-            android:label="This is MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="This is MainActivity" />
         <activity
             android:name=".basedemo.FirstActivity"
             android:label="This is FirstActivity" />
@@ -122,6 +116,14 @@
                 <action android:name="com.stormwangxhu.androidbasic.MY_BROADCAST" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".broacast.demo.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

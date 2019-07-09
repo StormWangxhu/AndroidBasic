@@ -64,23 +64,30 @@
 
     <Button
         android:id="@+id/database_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Database Button"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/contacts_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contacts Button"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/broadcast_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Broadcast Button"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/force_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send force offline broacast"
         android:textAllCaps="false" />
 
 </LinearLayout>
