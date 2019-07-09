@@ -31,12 +31,21 @@ public class BroadcastActivity extends BaseActivity {
         registerReceiver(networkChangeReceiver, intentFilter);
 
         // 发送标准广播
-        Button sendBroadcastButton = findViewById(R.id.send_broadcast_button);
-        sendBroadcastButton.setOnClickListener(new View.OnClickListener() {
+        Button sendStandardBroadcastButton = findViewById(R.id.send_standard_broadcast_button);
+        sendStandardBroadcastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent("com.stormwangxhu.androidbasic.MY_BROADCAST");
                 sendBroadcast(intent);
+            }
+        });
+
+        Button sendOrderedBroadcastButton = findViewById(R.id.send_order_broadcast_button);
+        sendOrderedBroadcastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.stormwangxhu.androidbasic.MY_BROADCAST");
+                sendOrderedBroadcast(intent, null);
             }
         });
     }

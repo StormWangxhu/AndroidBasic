@@ -5,10 +5,17 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/send_broadcast_button"
+        android:id="@+id/send_standard_broadcast_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send Broadcast"
+        android:text="Send Standard Broadcast"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/send_order_broadcast_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Ordered Broadcast"
         android:textAllCaps="false" />
 
 </LinearLayout>
