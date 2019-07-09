@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
@@ -27,6 +29,16 @@ public class BroadcastActivity extends BaseActivity {
         intentFilter.addAction(SCREEN_ON);
         intentFilter.addAction(SCREEN_OFF);
         registerReceiver(networkChangeReceiver, intentFilter);
+
+        // 发送标准广播
+        Button sendBroadcastButton = findViewById(R.id.send_broadcast_button);
+        sendBroadcastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("com.stormwangxhu.androidbasic.MY_BROADCAST");
+                sendBroadcast(intent);
+            }
+        });
     }
 
 
