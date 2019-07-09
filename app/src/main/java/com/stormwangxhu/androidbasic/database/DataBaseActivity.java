@@ -19,7 +19,7 @@ public class DataBaseActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_base);
 
-        final MyDatabseHelper myDatabseHelper = new MyDatabseHelper(this, "BookStore.db", null, 2);
+        final MyDatabaseHelper myDatabseHelper = new MyDatabaseHelper(this, "BookStore.db", null, 2);
         Button createButton = findViewById(R.id.create_database_button);
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override

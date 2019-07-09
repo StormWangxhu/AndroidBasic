@@ -69,4 +69,11 @@
         android:text="Database Button"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/contacts_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contacts Button"
+        android:textAllCaps="false" />
+
 </LinearLayout>

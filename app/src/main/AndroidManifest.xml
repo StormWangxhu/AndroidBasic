@@ -3,6 +3,7 @@
     package="com.stormwangxhu.androidbasic">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -84,7 +85,12 @@
         <activity
             android:name=".datastorage.IOActivity"
             android:label="IODemo" />
-        <activity android:name=".database.DataBaseActivity"></activity>
+        <activity
+            android:name=".database.DataBaseActivity"
+            android:label="Database Test" />
+        <activity
+            android:name=".contacts.ContactsDemoActivity"
+            android:label="Contacts Test" />
     </application>
 
 </manifest>

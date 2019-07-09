@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
+import com.stormwangxhu.androidbasic.contacts.ContactsDemoActivity;
 import com.stormwangxhu.androidbasic.database.DataBaseActivity;
 import com.stormwangxhu.androidbasic.datastorage.SharedPreferencesActivity;
 import com.stormwangxhu.androidbasic.listviewdemo.arrayadapter.ListViewDemoArrayAdapterActivity;
@@ -43,6 +44,8 @@ public class MainActiviry extends BaseActivity {
 
     // 数据库相关操作Button
     private Button databaseButton;
+
+    private Button contactsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +125,14 @@ public class MainActiviry extends BaseActivity {
             }
         });
 
+        contactsButton = findViewById(R.id.contacts_button);
+        contactsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, ContactsDemoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

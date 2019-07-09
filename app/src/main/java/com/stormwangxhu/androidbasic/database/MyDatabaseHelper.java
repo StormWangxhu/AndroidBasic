@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-public class MyDatabseHelper extends SQLiteOpenHelper {
+public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String CREATE_BOOK = "create table Book ("
             + "id integer primary key autoincrement, "
@@ -21,7 +21,7 @@ public class MyDatabseHelper extends SQLiteOpenHelper {
 
     private Context context;
 
-    public MyDatabseHelper(DataBaseActivity dataBaseActivity, String s, Object o, int i) {
+    public MyDatabaseHelper(DataBaseActivity dataBaseActivity, String s, Object o, int i) {
         super(dataBaseActivity, s, (SQLiteDatabase.CursorFactory) o, i);
         this.context = dataBaseActivity;
     }
