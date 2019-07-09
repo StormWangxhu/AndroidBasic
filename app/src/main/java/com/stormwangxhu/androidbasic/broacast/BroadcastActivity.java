@@ -18,6 +18,8 @@ public class BroadcastActivity extends BaseActivity {
 
     private static final String SCREEN_OFF = "android.intent.action.SCREEN_OFF";
 
+    private static final String MY_BROADCAST = "com.stormwangxhu.androidbasic.MY_BROADCAST";
+
     private DynamicRegisterReceiver networkChangeReceiver;
 
     @Override
@@ -35,7 +37,7 @@ public class BroadcastActivity extends BaseActivity {
         sendStandardBroadcastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("com.stormwangxhu.androidbasic.MY_BROADCAST");
+                Intent intent = new Intent(MY_BROADCAST);
                 sendBroadcast(intent);
             }
         });
@@ -44,7 +46,7 @@ public class BroadcastActivity extends BaseActivity {
         sendOrderedBroadcastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("com.stormwangxhu.androidbasic.MY_BROADCAST");
+                Intent intent = new Intent(MY_BROADCAST);
                 sendOrderedBroadcast(intent, null);
             }
         });
