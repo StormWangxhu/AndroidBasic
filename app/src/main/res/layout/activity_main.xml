@@ -13,12 +13,12 @@
         android:textColor="@color/colorAccent"
         android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/start_first_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Start FirstActivity"
-        android:textAllCaps="false" />
+    <!--<Button-->
+    <!--android:id="@+id/start_first_activity"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Start FirstActivity"-->
+    <!--android:textAllCaps="false" />-->
 
     <Button
         android:id="@+id/ui_button"
@@ -97,4 +97,10 @@
         android:text="Async Button"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/handler_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Handler Button"
+        android:textAllCaps="false" />
 </LinearLayout>

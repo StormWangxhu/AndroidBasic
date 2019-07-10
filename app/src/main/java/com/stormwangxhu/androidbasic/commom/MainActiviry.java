@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.async.AsyncActivity;
+import com.stormwangxhu.androidbasic.async.handler.HandlerActivity;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 import com.stormwangxhu.androidbasic.broacast.BroadcastActivity;
 import com.stormwangxhu.androidbasic.contacts.ContactsDemoActivity;
@@ -25,7 +26,7 @@ public class MainActiviry extends BaseActivity {
 
     public static final String TAG = "MainActivity";
 
-    private Button startFirstActivityButton;
+//    private Button startFirstActivityButton;
 
     // 启动线性布局按钮
     private Button uiButton;
@@ -55,21 +56,23 @@ public class MainActiviry extends BaseActivity {
 
     private Button asyncButton;
 
+    private Button handlerButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
         setContentView(R.layout.activity_main);//在调用布局文件
-        startFirstActivityButton = findViewById(R.id.start_first_activity);
+//        startFirstActivityButton = findViewById(R.id.start_first_activity);
         uiButton = findViewById(R.id.ui_button);
 
-        startFirstActivityButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActiviry.this, FirstActivity.class);//启动FirstActivity
-                startActivity(intent);
-            }
-        });
+//        startFirstActivityButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActiviry.this, FirstActivity.class);//启动FirstActivity
+//                startActivity(intent);
+//            }
+//        });
 
         uiButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,6 +168,15 @@ public class MainActiviry extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActiviry.this, AsyncActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        handlerButton = findViewById(R.id.handler_button);
+        handlerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, HandlerActivity.class);
                 startActivity(intent);
             }
         });

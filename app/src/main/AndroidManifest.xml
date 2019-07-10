@@ -124,7 +124,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".async.AsyncActivity"></activity>
+        <activity android:name=".async.AsyncActivity" />
+        <activity android:name=".async.handler.HandlerActivity"></activity>
     </application>
 
 </manifest>
