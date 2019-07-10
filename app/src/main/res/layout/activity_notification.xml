@@ -5,17 +5,10 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/handler_button"
+        android:id="@+id/send_notice_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Handler Button"
-        android:textAllCaps="false" />
-
-    <Button
-        android:id="@+id/notification_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send Notice Button"
+        android:text="Send Notice"
         android:textAllCaps="false" />
 
 </LinearLayout>
