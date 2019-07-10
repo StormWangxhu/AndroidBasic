@@ -9,8 +9,6 @@ import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.async.AsyncActivity;
-import com.stormwangxhu.androidbasic.async.handler.HandlerActivity;
-import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 import com.stormwangxhu.androidbasic.broacast.BroadcastActivity;
 import com.stormwangxhu.androidbasic.contacts.ContactsDemoActivity;
 import com.stormwangxhu.androidbasic.database.DataBaseActivity;
@@ -25,6 +23,8 @@ import com.stormwangxhu.androidbasic.uilayout.LinearLayoutTest;
 public class MainActiviry extends BaseActivity {
 
     public static final String TAG = "MainActivity";
+
+    public static final String FORCE_OFFLINE = "com.stormwangxhu.androidbasic.broadcast.demo.FORCE_OFFLINE";
 
 //    private Button startFirstActivityButton;
 
@@ -56,7 +56,7 @@ public class MainActiviry extends BaseActivity {
 
     private Button asyncButton;
 
-    private Button handlerButton;
+    private Button otherMainButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,7 +158,7 @@ public class MainActiviry extends BaseActivity {
         forceOfflineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent("com.stormwangxhu.androidbasic.broadcast.demo.FORCE_OFFLINE");
+                Intent intent = new Intent(FORCE_OFFLINE);
                 sendBroadcast(intent);
             }
         });
@@ -172,11 +172,11 @@ public class MainActiviry extends BaseActivity {
             }
         });
 
-        handlerButton = findViewById(R.id.handler_button);
-        handlerButton.setOnClickListener(new View.OnClickListener() {
+        otherMainButton = findViewById(R.id.other_button);
+        otherMainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActiviry.this, HandlerActivity.class);
+                Intent intent = new Intent(MainActiviry.this, OtherMainActivity.class);
                 startActivity(intent);
             }
         });

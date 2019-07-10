@@ -98,9 +98,10 @@
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/handler_button"
+        android:id="@+id/other_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Handler Button"
+        android:text="Other Button"
         android:textAllCaps="false" />
+
 </LinearLayout>

@@ -125,7 +125,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".async.AsyncActivity" />
-        <activity android:name=".async.handler.HandlerActivity"></activity>
+        <activity android:name=".async.handler.HandlerActivity" />
+        <activity android:name=".commom.OtherMainActivity"></activity>
     </application>
 
 </manifest>
