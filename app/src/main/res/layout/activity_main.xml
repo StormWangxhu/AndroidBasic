@@ -90,4 +90,11 @@
         android:text="Send force offline broacast"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/async_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Async Button"
+        android:textAllCaps="false" />
+
 </LinearLayout>

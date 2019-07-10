@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.stormwangxhu.androidbasic.R;
+import com.stormwangxhu.androidbasic.async.AsyncActivity;
 import com.stormwangxhu.androidbasic.basedemo.FirstActivity;
 import com.stormwangxhu.androidbasic.broacast.BroadcastActivity;
 import com.stormwangxhu.androidbasic.contacts.ContactsDemoActivity;
@@ -51,6 +52,8 @@ public class MainActiviry extends BaseActivity {
     private Button broadcastButton;
 
     private Button forceOfflineButton;
+
+    private Button asyncButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,6 +157,15 @@ public class MainActiviry extends BaseActivity {
             public void onClick(View view) {
                 Intent intent = new Intent("com.stormwangxhu.androidbasic.broadcast.demo.FORCE_OFFLINE");
                 sendBroadcast(intent);
+            }
+        });
+
+        asyncButton = findViewById(R.id.async_button);
+        asyncButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActiviry.this, AsyncActivity.class);
+                startActivity(intent);
             }
         });
     }
