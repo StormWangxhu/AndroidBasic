@@ -10,21 +10,21 @@ import com.stormwangxhu.androidbasic.R;
 import com.stormwangxhu.androidbasic.commom.BaseActivity;
 
 public class AsyncActivity extends BaseActivity {
-    private TextView txttitle;
-    private ProgressBar pgbar;
-    private Button btnupdate;
+    private TextView txtTitle;
+    private ProgressBar pgBar;
+    private Button btnUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_async);
-        txttitle = findViewById(R.id.txttitle);
-        pgbar = findViewById(R.id.pgbar);
-        btnupdate = findViewById(R.id.btnupdate);
-        btnupdate.setOnClickListener(new View.OnClickListener() {
+        txtTitle = findViewById(R.id.txttitle);
+        pgBar = findViewById(R.id.pgbar);
+        btnUpdate = findViewById(R.id.btnupdate);
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyAsyncTask myTask = new MyAsyncTask(txttitle, pgbar);
+                MyAsyncTask myTask = new MyAsyncTask(txtTitle, pgBar);
                 myTask.execute(1000);
             }
         });

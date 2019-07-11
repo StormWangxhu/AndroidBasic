@@ -18,7 +18,7 @@ import com.stormwangxhu.androidbasic.commom.BaseActivity;
 import androidx.core.app.NotificationCompat;
 
 public class NotificationActivity extends BaseActivity {
-    private static final String CHANNEL_ID = "1";
+    private static final String CHANNEL_ID = "2";
     private static final String CHANNEL_NAME = "CHANNEL1";
 
     @Override
@@ -45,7 +45,7 @@ public class NotificationActivity extends BaseActivity {
                             .setAutoCancel(true) // 自动取消
                             .setContentIntent(pi)
                             .build();
-                    manager.notify(1, notification);
+                    manager.notify(2, notification);
                 }
 
             }
