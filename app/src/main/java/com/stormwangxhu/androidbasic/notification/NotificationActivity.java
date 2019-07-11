@@ -46,6 +46,23 @@ public class NotificationActivity extends BaseActivity {
                             .setContentIntent(pi)
                             .build();
                     manager.notify(2, notification);
+                } else {
+                    // 兼容低版本
+                    Intent intent = new Intent(NotificationActivity.this, NotificationTestActivity.class);
+                    PendingIntent pi = PendingIntent.getActivity(NotificationActivity.this, 0, intent, 0);
+                    NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                    Notification notification = new NotificationCompat.Builder(NotificationActivity.this)
+                            .setContentTitle("This is content title")
+                            .setContentText("This is content text")
+                            .setWhen(System.currentTimeMillis())
+                            .setSmallIcon(R.drawable.fruit_6)
+                            .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.fruit_3))
+                            .setVibrate(new long[]{0, 1000, 0, 1000}) // 震动
+                            .setDefaults(Notification.DEFAULT_SOUND) // 提示音
+                            .setAutoCancel(true) // 自动取消
+                            .setContentIntent(pi)
+                            .build();
+                    manager.notify(2, notification);
                 }
 
             }
