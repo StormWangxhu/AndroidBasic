@@ -8,12 +8,13 @@ import android.widget.TextView;
 public class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
     @SuppressLint("StaticFieldLeak")
     private TextView textView;
+    @SuppressLint("StaticFieldLeak")
     private ProgressBar progressBar;
 
-    public MyAsyncTask(TextView txt, ProgressBar pgbar) {
+    MyAsyncTask(TextView txt, ProgressBar pgBar) {
         super();
         this.textView = txt;
-        this.progressBar = pgbar;
+        this.progressBar = pgBar;
     }
 
     //该方法不运行在UI线程中,主要用于异步操作,通过调用publishProgress()方法
